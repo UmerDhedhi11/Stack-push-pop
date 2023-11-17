@@ -1,0 +1,30 @@
+stack = [" "]*10
+tos = 0
+
+def push(item):
+    global tos
+
+    if(tos > 10):
+        print("Stack is full")
+    else:
+        stack[tos] = item
+        tos = tos + 1
+            
+push("abc")
+push("deg")
+push("xyz")
+print(stack)
+
+def pop(item):
+    global tos
+    
+    if(tos == 0):
+        print("Stack is empty")
+    else:
+        tos = tos - 1
+        item = stack[tos]
+        stack[tos] = " "
+
+pop(" ")
+pop(" ")
+print(stack)
